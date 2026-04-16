@@ -4,6 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import UserList from './pages/UserList';
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/dashboard" element={
             <ProtectedRoute><Dashboard /></ProtectedRoute>} />
+
+          <Route path="/users" element={
+            <ProtectedRoute roles={['admin', 'manager']}><UserList /></ProtectedRoute>} />
         </Routes>
       </Router>
     </AuthProvider>

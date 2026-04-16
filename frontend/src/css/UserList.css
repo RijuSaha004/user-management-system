@@ -1,0 +1,129 @@
+.userlist-container {
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.userlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userlist-create-btn {
+  background: #3b82f6;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.userlist-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.userlist-input {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.userlist-select {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.userlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.userlist-thead {
+  background: #f8fafc;
+  text-align: left;
+}
+
+.userlist-row {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.userlist-badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.userlist-badge-active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.userlist-badge-inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.userlist-actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.userlist-view-btn {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.userlist-edit-btn {
+  background: #fef9c3;
+  color: #854d0e;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.userlist-del-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.userlist-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.userlist-page-btn {
+  padding: 6px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.userlist-loading {
+  padding: 16px;
+}
