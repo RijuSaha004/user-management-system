@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import UserList from './pages/UserList';
 import UserDetail from './pages/UserDetail';
 import UserForm from './components/UserForm';
+import MyProfile from './pages/MyProfile';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/dashboard" element={
             <ProtectedRoute><Dashboard /></ProtectedRoute>} />
-
+          <Route path="/profile" element={
+            <ProtectedRoute><MyProfile /></ProtectedRoute>} />
           <Route path="/users" element={
             <ProtectedRoute roles={['admin', 'manager']}><UserList /></ProtectedRoute>} />
           <Route path="/users/create" element={
