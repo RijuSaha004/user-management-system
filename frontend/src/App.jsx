@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import UserList from './pages/UserList';
 import UserDetail from './pages/UserDetail';
+import UserForm from './components/UserForm';
 
 
 function App() {
@@ -21,9 +22,12 @@ function App() {
 
           <Route path="/users" element={
             <ProtectedRoute roles={['admin', 'manager']}><UserList /></ProtectedRoute>} />
-
+          <Route path="/users/create" element={
+            <ProtectedRoute roles={['admin']}><UserForm isEdit={false} /></ProtectedRoute>} />
           <Route path="/users/:id" element={
             <ProtectedRoute roles={['admin', 'manager']}><UserDetail /></ProtectedRoute>} />
+          <Route path="/users/:id/edit" element={
+            <ProtectedRoute roles={['admin', 'manager']}><UserForm isEdit={true} /></ProtectedRoute>} />
         </Routes>
       </Router>
     </AuthProvider>
