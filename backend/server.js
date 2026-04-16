@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const connectDB = require("./config/db");
 
 
 dotenv.config();
@@ -19,6 +20,13 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-app.listen(port, () => {
-  console.log(`App is listing on port : ${port}`);
-});
+connectDB()
+  .then(() => {
+    console.log("DB connected");
+    app.listen(port, () => {
+      console.log(`App is listing on port : ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.log("Server connection failed !!! : ", error);
+  });
