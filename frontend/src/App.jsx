@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import UserList from './pages/UserList';
+import UserDetail from './pages/UserDetail';
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
 
           <Route path="/users" element={
             <ProtectedRoute roles={['admin', 'manager']}><UserList /></ProtectedRoute>} />
+
+          <Route path="/users/:id" element={
+            <ProtectedRoute roles={['admin', 'manager']}><UserDetail /></ProtectedRoute>} />
         </Routes>
       </Router>
     </AuthProvider>

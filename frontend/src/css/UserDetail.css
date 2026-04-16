@@ -1,0 +1,65 @@
+.userdetail-container {
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.userdetail-back {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.userdetail-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 16px;
+}
+
+.userdetail-name {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.userdetail-email {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.userdetail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.userdetail-edit-btn {
+  background: #3b82f6;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.userdetail-loading {
+  padding: 32px;
+}
+
+/* Info component */
+.userdetail-info {
+  margin-bottom: 12px;
+}
+
+.userdetail-info-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.userdetail-info-value {
+  font-weight: 500;
+  color: #1e293b;
+}
