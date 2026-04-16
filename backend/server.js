@@ -22,6 +22,7 @@ app.use(cookieParser());
 
 // Routes --------------------------------------------
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 
 // Global error handler
