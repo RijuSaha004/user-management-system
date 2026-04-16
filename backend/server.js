@@ -20,6 +20,15 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+// Routes --------------------------------------------
+app.use('/api/auth', require('./routes/authRoutes'));
+
+
+// Global error handler
+app.use((err, req, res, next) => {
+  res.status(500).json({ message: err.message || 'Server Error' });
+});
+
 connectDB()
   .then(() => {
     console.log("DB connected");
